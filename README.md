@@ -1,6 +1,6 @@
 # hibernate-learning
 
-#### Hibernate object states
+## Hibernate object states
 ```
 Transition - 
 Persistent
