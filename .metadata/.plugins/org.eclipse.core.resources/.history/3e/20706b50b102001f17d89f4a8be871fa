@@ -1,0 +1,31 @@
+package com.hibernate.application;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Stores")
+public class Store {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int storeId;
+	
+	private String street;
+	
+	private String city;
+	
+	private boolean isOpen;
+	
+	private double x;
+	
+	private Date startDate;
+	
+	private byte[] storeImage;
+	
+}

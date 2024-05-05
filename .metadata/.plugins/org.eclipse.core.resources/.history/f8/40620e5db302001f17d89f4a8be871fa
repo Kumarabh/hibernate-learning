@@ -1,0 +1,28 @@
+package com.hibernate.application;
+
+import java.time.LocalDate;
+import java.util.Date;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        SessionFactory factory = new Configuration().configure().buildSessionFactory();
+        Session session = factory.openSession();
+        org.hibernate.Transaction ts = session.beginTransaction();
+        
+        Store s1 = new Store(0, "ABC Stores", "Street 1", "New York", true, 0, new Date("2023-01-01"), null);
+        
+        session.save(s1);
+        ts.commit();
+        System.out.println(session);
+    }
+}
