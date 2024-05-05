@@ -20,8 +20,13 @@ Removed
 **Detached** <br>
   Session is cleared using or closed. Data is stored in database but it's not associated with the session.
   ```
+  Transaction tsx = session.beginTransaction();
+  session.setCustomerName("John Doe");
+  tsx.commit();
   session.close();
-  session.setCustomeName("James Smith"); // Error
+
+  session.setCustomeName("James Smith"); // Will not take James Smith
+  factory.close();
   ```
 
 **Removed** <br>
