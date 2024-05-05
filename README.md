@@ -24,5 +24,5 @@ Removed
   session.setCustomeName("James Smith"); // Error
   ```
 
-- **Removed** <br>
+**Removed** <br>
   Object is deleted from the session/database.
