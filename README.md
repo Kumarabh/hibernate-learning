@@ -7,19 +7,19 @@ Persistent
 Detached
 Removed
 ```
-- **Transition** <br>
+**Transition** <br>
   Object is created using getter/ setter but not session.save is not called
   ```
   customer.setCustomerName("John Doe");
   ```
 
-- **Persistent** <br>
+**Persistent** <br>
   Object is saved in session using session.save, it writes the data into database.
   ```
   session.save(customer);
   ```
 
-- **Detached** <br>
+**Detached** <br>
   Session is cleared using or closed. Data is stored in database but it's not associated with the session.
   ```
   session.close();
