@@ -1,8 +1,9 @@
 # hibernate-learning
 
 #### Hibernate object states
+- Transition
 ```
-Transition
+Transition - 
 Persistent
 Detached
 Removed
