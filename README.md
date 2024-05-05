@@ -1,4 +1,5 @@
 ## Hibernate notes application
 
-- Create maven project
-**Select Archetype:** maven-archetype-webapp
+#### Create maven project
+**Select Archetype** <br> 
+maven-archetype-webapp
