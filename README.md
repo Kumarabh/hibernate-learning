@@ -1,4 +1,2 @@
 #### Create hibernate project
-```
-maven-archetype-webbapp
-```
+- **Archetype** maven-archetype-webapp
