@@ -1,5 +1,3 @@
-# hibernate-learning
-
 ## Hibernate object states
 ```
 Transition - 
