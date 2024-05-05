@@ -7,14 +7,14 @@ Persistent
 Detached
 Removed
 ```
-- **Transition**
+- **Transition** <br>
   Object is created using getter/ setter but not session.save is not called
 
-- **Persistent** 
+- **Persistent** <br>
   Object is saved in session using session.save, it writes the data into database.
 
-- **Detached**
+- **Detached** <br>
   Session is cleared using or closed. Data is stored in database but it's not associated with the session.
 
-- **Removed**
+- **Removed** <br>
   Object is deleted from the session/database.
