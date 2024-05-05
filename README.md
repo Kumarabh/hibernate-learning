@@ -30,4 +30,4 @@ Removed
   ```
 
 **Removed** <br>
-  Object is deleted from the session/database.
+  Object is removed from database, but associated with session
