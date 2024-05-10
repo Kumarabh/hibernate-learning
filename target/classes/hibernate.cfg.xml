@@ -5,14 +5,15 @@
 	<session-factory>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">
-			jdbc:mysql://localhost:3306/hibernatedb02</property>
+			jdbc:mysql://localhost:3306/hb01</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">create</property>
 		<property name="show_sql">false</property>
 		<property name="format_sql">false</property>
 		<mapping class="com.hibernate.application.Customer"></mapping>
+				<mapping class="com.hibernate.application.Product"></mapping>
 		<mapping class="com.hibernate.application.Order"></mapping>
 
 	</session-factory>

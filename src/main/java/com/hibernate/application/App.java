@@ -2,7 +2,9 @@ package com.hibernate.application;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -20,33 +22,27 @@ public class App
     	Transaction tsx = session.beginTransaction();
     	
     	// CREATE 
+    	Product p1 = new Product("Shoes", "Adidas", "1200.00", "This shoe is awesome.");
+    	Product p2 = new Product("T-Shirt", "Puma", "1500.00", "This T-shirt is awesome.");
     	Order o1 = new Order();
-    	Order o2 = new Order();
-    	List<Order> orders = new ArrayList<Order>(Arrays.asList(o1, o2)) ;
+    	List<Order> orders = new ArrayList<Order>(Arrays.asList(o1)) ;
+    	List<Product> products = new ArrayList<Product>(Arrays.asList(p1, p2));
     	Customer c1 = new Customer("John Doe");
-    	Customer c2 = new Customer("James Smith");
-    	Customer c3 = new Customer("Jessica Jones");
-    	Customer c4 = new Customer("Jessy Custer");
-    	Customer c5 = new Customer("Jack Ryan");
-    	Customer c6 = new Customer("Elenor Shellstrop");
 
-    	// SET 
-    	c1.setOrders(orders);
     	
     	// SET 
+    	p1.setOrders(orders);
+    	p2.setOrders(orders);
+    	o1.setProducts(products);
     	o1.setCustomer(c1);
-    	o2.setCustomer(c2);
+    	c1.setOrders(orders);
+
     	
     	// SAVE
+    	session.save(p1);
+    	session.save(p2);
     	session.save(o1);
-    	session.save(o2);
     	session.save(c1);
-    	session.save(c1);
-    	session.save(c2);
-    	session.save(c3);
-    	session.save(c4);
-    	session.save(c5);
-    	session.save(c6);
 
     	// ------------------------------- CREATE QUERY 
     	Query<Customer> query = session.createQuery("FROM Customer", Customer.class);
